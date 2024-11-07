@@ -1,0 +1,178 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a, header i{
+  color: orange;
+  font-size: 2em;
+  padding: 0.1em;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.5em;
+  margin-right: 3em;
+}
+
+header nav ul a {
+  color: white;
+  font-size: 1.1em;
+  padding: 0.1em;
+}
+
+section.Seccion-1 {
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  gap: 1em;
+  margin: 6em;
+  font-size: 15px;
+}
+
+.acerca-imagen img {
+  height: 10em;
+  border-radius: 5%;
+}
+
+.seccion-2 img {
+  width: 100%;
+  height: 40em;
+}
+
+footer,  #btn-generar  {
+  background-color: #c7850b;
+  width: 100%;
+  padding: 0.9em;
+}
+
+footer nav ul {
+  margin: 0;
+  color: aqua;
+}
+
+a i.fa-solid.fa-cat.fixed {
+  color: orange;
+  position: fixed;
+  bottom: 22px;
+  right: 39px;
+}
+
+.container {
+  font-size: 20px;
+  color: black;
+}
+
+.nave {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 1em;
+}
+nav{
+  display: flex;
+}
+nav ul {
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+}
+
+.menu-btn {
+  display: none; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+@media (max-width: 767px) {
+  nav {
+      display: none; /* Esconde la barra de navegación */
+  }
+
+  .menu-btn {
+      display: block; /* Muestra el botón de menú en pantallas pequeñas */
+  }
+
+  .nav-visible {
+      display: flex; /* Muestra la barra de navegación cuando está visible */
+      flex-direction: column; /* Cambia la dirección a columna */
+      position: absolute; /* Posiciona la navegación en relación a su contenedor */
+      top: 60px; /* Espacio desde la parte superior */
+      right: 0; /* Alinea a la derecha */
+      background-color: orange; /* Color de fondo de la navegación */
+      padding: 1em; /* Espacio alrededor */
+      z-index: 1000; /* Asegura que esté encima de otros elementos */
+  }
+
+  nav ul {
+      flex-direction: column; /* Cambia a una lista vertical */
+      gap: 1em; /* Espacio entre los elementos de la lista */
+  }
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      align-items: center;
+  }
+
+  .Seccion-1 {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      align-items: center;
+  }
+
+  #btn-generar {
+      width: 100%; /* Botón ocupa el 100% del ancho */
+      padding: 15px; /* Aumenta el espaciado interno del botón */
+  }
+}
+
+@media (min-width: 768px) {
+  .Seccion-1 {
+      display: flex; /* Diseño en fila para pantallas grandes */
+      justify-content: space-between;
+  }
+
+  #btn-generar {
+      width: auto; /* Vuelve al ancho automático */
+  }
+}
+#btn-generar {
+  background-color: #f9f9f9; /* Mismo color de fondo que el contenedor */
+  color: black; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  border: 2px solid red; /* Borde azul */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 0.60em; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  width: 100%;
+  transition: background-color 0.3s, transform 0.3s; /* Efecto suave al pasar el mouse */
+}
+
+#btn-generar:hover {
+  background-color: green; /* Color de fondo más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
